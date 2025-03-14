@@ -40,10 +40,10 @@ https://happypython.ru/2022/07/21/parser-wildberries/  # ссылка на об�
 
 def get_catalogs_wb() -> dict:
     """получаем полный каталог Wildberries"""
-    # url = 'https://www.wildberries.ru/webapi/menu/main-menu-ru-ru.json'   # устарела ссылка апи
-    # url = 'https://static-basket-01.wb.ru/vol0/data/main-menu-ru-ru-v2.json'   # устарела ссылка апи
-    # url = 'https://static-basket-01.wbbasket.ru/vol0/data/main-menu-ru-ru-v2.json'   # устарела ссылка апи
-    url = 'https://static-basket-01.wbbasket.ru/vol0/data/main-menu-ru-ru-v3.json'
+    url = 'https://www.wildberries.ru/webapi/menu/main-menu-ru-ru.json'   # устарела ссылка апи
+    url = 'https://static-basket-01.wb.ru/vol0/data/main-menu-ru-ru-v2.json'   # устарела ссылка апи
+    print(123)
+    # url = 'https://static-basket-01.wbbasket.ru/vol0/data/main-menu-ru-ru-v3.json'
     headers = {'Accept': '*/*', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
     # with open('wb_goods_list.json', 'w', encoding='UTF-8') as file:
     #     json.dump(requests.get(url, headers=headers).json(), file, indent=4, ensure_ascii=False)
