@@ -162,6 +162,29 @@ def save_excel(data: list, filename: str):
     writer.close()
     print(f'Все сохранено в {filename}.xlsx\n')
 
+def save_excel2(data: list, filename: str):
+    """сохранение результата в excel файл"""
+    df = pd.DataFrame(data)
+    writer = pd.ExcelWriter(f'{filename}.xlsx')
+    df.to_excel(writer, sheet_name='data', index=False)
+    # указываем размеры каждого столбца в итоговом файле
+    writer.sheets['data'].set_column(0, 1, width=10)
+    writer.sheets['data'].set_column(1, 2, width=34)
+    writer.sheets['data'].set_column(2, 3, width=8)
+    writer.sheets['data'].set_column(3, 4, width=9)
+    writer.sheets['data'].set_column(4, 5, width=8)
+    writer.sheets['data'].set_column(5, 6, width=4)
+    writer.sheets['data'].set_column(6, 7, width=20)
+    writer.sheets['data'].set_column(7, 8, width=6)
+    writer.sheets['data'].set_column(8, 9, width=23)
+    writer.sheets['data'].set_column(9, 10, width=13)
+    writer.sheets['data'].set_column(10, 11, width=11)
+    writer.sheets['data'].set_column(11, 12, width=12)
+    writer.sheets['data'].set_column(12, 13, width=15)
+    writer.sheets['data'].set_column(13, 14, width=15)
+    writer.sheets['data'].set_column(14, 15, width=67)
+    writer.close()
+    print(f'Все сохранено в {filename}.xlsx\n')
 
 def parser(url: str, low_price: int = 1, top_price: int = 1000000, discount: int = 0):
     """основная функция"""
