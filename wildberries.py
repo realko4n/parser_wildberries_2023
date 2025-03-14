@@ -227,3 +227,11 @@ if __name__ == '__main__':
         except:
             print('произошла ошибка данных при вводе, проверте правильность введенных данных,\n'
                   'Перезапуск...')
+
+
+def search_category_in_catalog2(url: str, catalog_list: list) -> dict:
+    """проверка пользовательской ссылки на наличии в каталоге"""
+    for catalog in catalog_list:
+        if catalog['url'] == url.split('https://www.wildberries.ru')[-1]:
+            print(f'найдено совпадение: {catalog["name"]}')
+            return catalog
